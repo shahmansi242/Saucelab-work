@@ -8,7 +8,7 @@ public class BaseTest extends Utils {
     @Before
     public void openBrowser(){
         // browserSelector.openBrowser();
-        browserSelector.openBrowser();
+        browserSelector.setUpBrowser();
 
 
     }

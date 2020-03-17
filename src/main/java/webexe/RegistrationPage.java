@@ -14,18 +14,24 @@ public class RegistrationPage extends Utils {
     private  static String timestamp = timeStamp();
 
       // user is on home page
-    public  void  verifyUserOnRegisterPage()
+   public  void  verifyUserOnRegisterPage()
     {
         assertURL("register");
-    }
+   }
       // user enter registration details
-    public void userEnterRegistrationDetails(){
+    public void userEnterRegistrationDetails()
+    {
+       try {
+            Thread.sleep(2000);
+       }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        sendText(_firstName,firstName);
         try {
             Thread.sleep(2000);
         }catch (InterruptedException e){
             e.printStackTrace();
         }
-        sendText(_firstName,firstName);
 
         sendText(_lastName,lastName);
         sendText(_email,"mshah6135+"+timestamp+ "@gmail.com");

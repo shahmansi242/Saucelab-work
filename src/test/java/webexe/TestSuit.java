@@ -15,7 +15,7 @@ public class TestSuit extends BaseTest {
     public void userShouldAbleToRegisterSuccessfully(){
 
         homePage.clickOnRegisterButton();
-        registrationPage.verifyUserOnRegisterPage();
+       // registrationPage.verifyUserOnRegisterPage();
         registrationPage.userEnterRegistrationDetails();
         registrationResultPage.verifyUserSeeRegistrationSuccessMessage();
 
