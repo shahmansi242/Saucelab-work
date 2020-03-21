@@ -22,7 +22,7 @@ public class BrowserSelector extends Utils {
     // boolean condition for SauceLab or local
     public static final boolean SAUCE_LAB = Boolean.parseBoolean( System.getProperty( "Sauce" ) );
     // get browser name from data file
-    public static final String browser =loadProp.getProperty( "browser" );
+    public static final String browser = System.getProperty( "browser" );
 
     // browser set up method
     public void setUpBrowser()
@@ -76,7 +76,7 @@ public class BrowserSelector extends Utils {
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
-        } else if (browser.equalsIgnoreCase( "Safari" ))
+        } else if (browser.equalsIgnoreCase( "safari" ))
         {
             DesiredCapabilities caps = DesiredCapabilities.safari();
             caps.setCapability( "platform", "OS X10.10" );
@@ -97,6 +97,7 @@ public class BrowserSelector extends Utils {
     }
         // if sauce lab is false
         else {
+
             if (browser.equalsIgnoreCase("chrome")) {
                 System.setProperty("webdriver.chrome.driver", "src/test/Resourses/BrowserDriver/chromedriver.exe");
                 driver = new ChromeDriver();

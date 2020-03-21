@@ -1,0 +1,7 @@
+webexe\BrowserSelector.class
+webexe\HomePage.class
+webexe\RegistrationResultPage.class
+webexe\BasePage.class
+webexe\Utils.class
+webexe\RegistrationPage.class
+webexe\LoadProp.class

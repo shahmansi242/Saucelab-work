@@ -6,7 +6,7 @@ import org.junit.Before;
 public class BaseTest extends Utils {
     BrowserSelector browserSelector = new BrowserSelector();
     @Before
-    public void openBrowser(){
+    public void setUpBrowser(){
         // browserSelector.openBrowser();
         browserSelector.setUpBrowser();
 
